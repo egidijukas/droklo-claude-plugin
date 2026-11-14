@@ -102,8 +102,12 @@ Recipe `nutritionPerPortion` + `nutritionEstimated`. Log `nutrition`
 - Comment `target.type`: `planEntry`, `mealLog`, `recipe` (with `id`),
   `day` (with `date`), `general`. `kind`: `comment` or `question`.
   Replies use `parentId`.
-- `notices`: `proposal` (with `batchId`) or `targets`; `mark_read`
-  takes the notice `id`.
+- `notices`: `proposal` (with `batchId`), `targets`, or `team` (the
+  Droklo team answered this person's feedback; with `feedbackId`);
+  `mark_read` takes the notice `id`.
+- Feedback to the Droklo team (`send_feedback`): `kind` `problem`,
+  `idea`, `praise`, `rating`, `reply`; `rating` `good`, `okay`, `bad`;
+  `replies` `here`, `email`, `none`. An `INTERNAL` error carries `ref`.
 
 ## Limits and call shape
 

@@ -34,6 +34,13 @@ create_shopping_list {"from": "2026-11-13", "to": "2026-11-15", "name": "Weekend
 - `list.countedFor`: what the list is for and for how many.
 - `notOnList`: link a recipe, add the items by hand, or say which meals
   they shop for themselves. Never call the list complete otherwise.
+- A planned meal with a recipe goes on a list through the meal, never
+  by typing its ingredients: when a plan result says it is on no list
+  (`no_shopping_list`), stretch the list (`rename_shopping_list`) or
+  make one. If you typed a planned meal's foods anyway, Droklo puts the
+  meal on the list itself and returns `forMeals`: say its `say`.
+- A completed list is the record of a shop. Never re-date or refresh
+  it; for days it does not cover, make a new list.
 - `planChecks` (`fresh_early`): do what it says.
 - `oneMeal`: lines bought for one meal. When money is tight, offer to
   swap that meal. Never call it a saving in money.
